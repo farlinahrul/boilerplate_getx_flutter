@@ -2,13 +2,15 @@ const Map<String, String> id = {
   'txt_name': 'name',
   'txt_email': 'Email',
   'txt_password': 'Password',
-  'txt_menu_users': 'Users',
+  'txt_menu_users': 'Akun Akun',
+  'txt_menu_user': 'Akun',
   'txt_menu_other': 'Lainnya',
   'txt_menu_login': 'Masuk',
   'txt_menu_detail': 'Detil',
   'txt_empty_user': 'Tidak ada data user',
   'txt_error_title': 'Terjadi kesalahan',
   'txt_error_general': 'Oops terjadi kesalahan server...',
+  'txt_search': 'Cari',
 
   //BUTTON
   'txt_button_retry': 'Coba Lagi',
@@ -25,4 +27,7 @@ const Map<String, String> id = {
   'txt_valid_number': 'Silahkan masukkan nomer yang benar',
   'txt_valid_notEmpty': 'Kolom tidak boleh kosong',
   'txt_retry': "Coba lagi",
+
+  // user
+  'txt_user': "Akun"
 };

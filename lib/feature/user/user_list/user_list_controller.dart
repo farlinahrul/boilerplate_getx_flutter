@@ -4,7 +4,7 @@ import 'package:boilerplate_getx_flutter/data/remote/api_services.dart';
 import 'package:boilerplate_getx_flutter/data/remote/base/base_list_controller.dart';
 import 'package:boilerplate_getx_flutter/data/remote/errorhandler/error_handler.dart';
 
-class UserController extends BaseListController<User> {
+class UserListController extends BaseListController<User> {
   @override
   void onInit() {
     getUsers();

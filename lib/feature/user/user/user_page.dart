@@ -1,16 +1,15 @@
-import 'package:boilerplate_getx_flutter/feature/dialog/dialog_controller.dart';
+import 'package:boilerplate_getx_flutter/feature/user/user/user_controller.dart';
 import 'package:boilerplate_getx_flutter/utills/helper/constant.dart';
 import 'package:boilerplate_getx_flutter/utills/helper/validator.dart';
 import 'package:boilerplate_getx_flutter/utills/widget/primary_button.dart';
 import 'package:boilerplate_getx_flutter/utills/widget/state_handle_widget.dart';
-import 'package:boilerplate_getx_flutter/utills/widget/statefull_wrapper.dart';
 import 'package:boilerplate_getx_flutter/utills/widget/text/text_inter.dart';
 import 'package:boilerplate_getx_flutter/utills/widget/text_with_plain_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DialogPage extends StatelessWidget {
-  DialogPage({Key? key}) : super(key: key);
+class UserPage extends StatelessWidget {
+  UserPage({Key? key}) : super(key: key);
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class DialogPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('txt_menu_dialog'.tr),
       ),
-      body: GetBuilder<DialogController>(
+      body: GetBuilder<UserController>(
         builder: (controller) {
           return Form(
             key: _formKey,
@@ -28,14 +27,14 @@ class DialogPage extends StatelessWidget {
               child: Column(
                 children: [
                   TextWithPlainTextField(
-                    title: "ID USER",
-                    labelText: "Input ID USER",
+                    title: "ID ${'txt_user'.tr}",
+                    labelText: "Input ID ${'txt_user'.tr}",
                     controller: controller.idController,
                     validator: Validator().number,
                     onChanged: (value) => controller.update(),
                   ),
                   PrimaryButton(
-                    title: "SEARCH",
+                    title: "txt_search".tr,
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         controller.getUser();

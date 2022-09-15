@@ -1,14 +1,16 @@
-import 'package:boilerplate_getx_flutter/feature/user/user_page.dart';
+import 'package:boilerplate_getx_flutter/feature/user/user/user_page.dart';
+import 'package:boilerplate_getx_flutter/feature/user/user_list/user_list_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:boilerplate_getx_flutter/feature/dialog/sample_dialog_page.dart';
 import 'package:boilerplate_getx_flutter/feature/other/other_page.dart';
 import 'package:boilerplate_getx_flutter/utills/widget/colored_status_bar.dart';
 
 import 'dashboard_tab_controller.dart';
 
 class DashBoardTabPage extends StatelessWidget {
+  const DashBoardTabPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DashBoardTabController>(
@@ -19,9 +21,9 @@ class DashBoardTabPage extends StatelessWidget {
               child: IndexedStack(
                 index: controller.tabIndex,
                 children: [
-                  const SearchUserPage(),
-                  DialogPage(),
-                  OtherPage(),
+                  const UsersPage(),
+                  UserPage(),
+                  const OtherPage(),
                 ],
               ),
             ),
@@ -44,7 +46,7 @@ class DashBoardTabPage extends StatelessWidget {
                   ),
                   _bottomNavigationBarItem(
                     icon: CupertinoIcons.book,
-                    label: 'txt_menu_dialog'.tr,
+                    label: 'txt_menu_user'.tr,
                   ),
                   _bottomNavigationBarItem(
                     icon: CupertinoIcons.bag,

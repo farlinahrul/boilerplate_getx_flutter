@@ -1,15 +1,15 @@
+import 'package:boilerplate_getx_flutter/feature/user/user_list/widgets/user_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:boilerplate_getx_flutter/feature/user/widgets/user_item.dart';
 
-import '../user_controller.dart';
+import '../user_list_controller.dart';
 
 class ListUserbuilder extends StatelessWidget {
   const ListUserbuilder(
     this.controller, {
     Key? key,
   }) : super(key: key);
-  final UserController controller;
+  final UserListController controller;
   @override
   Widget build(BuildContext context) {
     return SmartRefresher(

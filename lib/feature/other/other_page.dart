@@ -27,8 +27,7 @@ class OtherPage extends StatelessWidget {
                     FormImagePicker(name: 'profile_pict'),
                     const SizedBox(height: 32),
                     Text(
-                      // controller.user?.name ?? '',
-                      "TESS",
+                      controller.user?.firstName ?? '',
                       style: Theme.of(context).textTheme.headline4,
                     ),
                   ],

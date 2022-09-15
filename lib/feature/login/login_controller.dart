@@ -43,7 +43,7 @@ class LoginController extends BaseObjectController<User> {
     update();
     await Future.delayed(const Duration(seconds: 2));
     var user = User(
-      firstName: "depan",
+      firstName: "user",
       lastName: "belakang",
     );
     authController.saveAuthData(user: user, token: "a");

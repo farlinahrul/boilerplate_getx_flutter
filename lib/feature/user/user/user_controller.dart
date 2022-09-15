@@ -4,7 +4,7 @@ import 'package:boilerplate_getx_flutter/data/remote/errorhandler/error_handler.
 import 'package:boilerplate_getx_flutter/model/user.dart';
 import 'package:flutter/cupertino.dart';
 
-class DialogController extends BaseObjectController<User> {
+class UserController extends BaseObjectController<User> {
   TextEditingController idController = TextEditingController();
 
   void refreshPage() {}
