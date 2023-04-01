@@ -26,7 +26,7 @@ abstract class RestClient {
   }
 
   @GET("/users")
-  Future<ApiResponses<User>> getUsers();
+  Future<ApiResponses<User>> getUsers(); // This endpoint should be implement paginate
 
   @GET("/users/{id}")
   Future<ApiResponse<User>> getUserById(@Path("id") int id);
