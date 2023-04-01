@@ -17,6 +17,7 @@ class DashBoardTabPage extends StatelessWidget {
       builder: (controller) {
         return ColoredStatusBar(
           child: Scaffold(
+            resizeToAvoidBottomInset: false,
             body: SafeArea(
               child: IndexedStack(
                 index: controller.tabIndex,
