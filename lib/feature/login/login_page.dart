@@ -89,6 +89,7 @@ class LoginPage extends StatelessWidget {
                                     onPressed: () async {
                                       if (_formKey.currentState!.validate()) {
                                         // controller.signInWithEmailAndPassword();
+                                        controller.bypassLogin();
                                       }
                                     }),
                             const FormVerticalSpace(height: 20),

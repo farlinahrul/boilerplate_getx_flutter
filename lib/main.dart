@@ -6,10 +6,14 @@ import 'package:boilerplate_getx_flutter/utills/localization/app_translation.dar
 import 'package:boilerplate_getx_flutter/utills/localization/locale_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:sizer/sizer.dart';
+
+import 'data/local/storage/storage_constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init(StorageName.STORAGE_NAME);
   await Initializer.init();
   await Initializer.initHive();
   runApp(const MyApp());
